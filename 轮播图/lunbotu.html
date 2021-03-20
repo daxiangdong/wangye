@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="bo.css">
+<body>   
+    <p>原神</p>
+    <div class="tu">
+        <img class="img-slide tu1" src="tuqu/ganyu.png" alt="1">
+        <img class="img-slide tu2" src="tuqu/gongzi.jfif" alt="2">
+        <img class="img-slide tu3" src="tuqu/hutao.jfif" alt="3">
+        <img class="img-slide tu4" src="tuqu/keqin.jpg" alt="4">
+        <img class="img-slide tu5" src="tuqu/xiao.jfif" alt="5">
+    </div>
+</body>
+<script type="text/javascript">
+    var index=0;
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    function stop(){
+		clearInterval(timeId);
+	}
+	function start(){
+		clearInterval(timeId);
+		timeId=setInterval(divInterval,2000);
+	}
+    onblur = function(){
+	stop();
+}
+//页面获取焦点时重启定时器
+onfocus = function(){
+	start();
+}
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,2000);
+</script>
+</html>

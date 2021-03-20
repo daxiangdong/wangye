@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+}
+p{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(13, 230, 238);
+    font-family: zhengkai;
+    background-color: black;
+}
+.tu{
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+.tu img{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.tu1, .tu2, .tu3, .tu4, .tu5{
+    display: none;
+}
